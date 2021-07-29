@@ -1,5 +1,6 @@
 import React from 'react'
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavButton, NavBtnLink} from './NavbarElements';
+import logo from '../../images/Logo_Horizontal_Nav.png'
+import {Nav, NavbarContainer, NavLogoContainer, MobileIcon, NavMenu, NavItem, NavLinks, NavLogo, NavButton, NavBtnLink} from './NavbarElements';
 import {FaBars} from 'react-icons/fa'
 
 const Navbar = ({toggle}) => {
@@ -7,7 +8,9 @@ const Navbar = ({toggle}) => {
         <>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'>People's Wealth</NavLogo>
+                    <NavLogoContainer to='/'>
+                        <NavLogo src={logo}></NavLogo>
+                    </NavLogoContainer>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
@@ -24,12 +27,12 @@ const Navbar = ({toggle}) => {
                         <NavItem>
                             <NavLinks to="contact">Contact</NavLinks>
                         </NavItem>
-                        <NavButton>
+                        {/* <NavButton>
                             <NavBtnLink to="/signin">Sign In</NavBtnLink>
                         </NavButton>
                         <NavButton>
                             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-                        </NavButton>
+                        </NavButton> */}
                     </NavMenu>
                 </NavbarContainer>
             </Nav>

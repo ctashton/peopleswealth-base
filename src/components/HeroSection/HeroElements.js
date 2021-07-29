@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import heroImage from '../../images/Hero.jpg'
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 
 export const HeroContainer = styled.div`
@@ -7,7 +8,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 600px;
+    height: 720px;
     position: relative;
     z-index: 1;
 
@@ -25,25 +26,32 @@ export const HeroBg = styled.div`
     height: 100%;
     overflow: hidden;
     background-size: cover;
-    Background-color: #e8e8e8;
+    background-position: center;
+    background-color: #E3e3e3;
+    background-image: url(${heroImage})
 `
 
 export const ImageBg = styled.div`
     width: 100%
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #EEE;
+    background-size: cover;
+
+    backround-position: center;
+
 `
 export const HeroContent = styled.div`
     z-index: 3;
     max-width: 1200px;
     position: absolute;
-    padding: 8px 24px;
+    padding: 125px 55px;
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin: 12% 0%;
+    margin: 12% 0% 3% 0%;
+
+    @media screen and (max-width: 768px) {
+        align-items: center;
+    }
 `
 
 export const HeroH1 = styled.h1`
@@ -54,7 +62,7 @@ export const HeroH1 = styled.h1`
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 768) {
+    @media screen and (max-width: 768px) {
         font-size: 40px;
     }
 
@@ -64,10 +72,14 @@ export const HeroH1 = styled.h1`
 `
 
 export const HeroBtnWrapper = styled.div`
-margin-top: 32px;
+margin-top: 0px;
+max-width: 210px;
+max-height: 65px
 display: flex;
 flex-direction: column;
-align-items: left;
+justify-content: center;
+align-items: center;
+text-align: center;
 `
 
 export const ArrowForward = styled(MdArrowForward)`

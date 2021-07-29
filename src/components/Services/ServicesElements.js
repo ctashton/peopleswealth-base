@@ -6,17 +6,18 @@ export const ServicesContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #EEE;
+    background: #333;
 
 
 `
 export const ServicesH1 = styled.h1`
-margin-bottom: 24px;
+margin-bottom: 50px;
 font-size: 48px;
 line-height: 1.1;
-font-weight: 600;
+font-weight: 800;
 text-align: center;
-color: ${({lightText}) => (lightText ? '#f9f9f9' : '#333333')};
+// color: ${({lightText}) => (lightText ? '#f9f9f9' : '#333333')};
+color: #f9f9f9;
 
 @media screen and (max-width: 480px) {
     font-size: 32px;
