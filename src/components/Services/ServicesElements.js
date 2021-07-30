@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const ServicesContainer = styled.div`
-    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #333;
+    padding: 100px;
 
 
 `
@@ -25,7 +25,7 @@ color: #f9f9f9;
 `
 
 export const ServicesWrapper = styled.div`
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

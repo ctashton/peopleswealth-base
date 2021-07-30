@@ -41,7 +41,7 @@ export const ImageBg = styled.div`
 `
 export const HeroContent = styled.div`
     z-index: 3;
-    max-width: 1200px;
+    max-width: 1100px;
     position: absolute;
     padding: 125px 55px;
     display: flex;
