@@ -1,4 +1,17 @@
 import styled from 'styled-components'
+import Modal from 'styled-react-modal'
+
+export const StyledModal = Modal.styled`
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  position: static;
+
+`
+
 
 export const TeamContainer = styled.div`
     height: auto;
@@ -64,8 +77,8 @@ margin: 0 0;
 `
 
 export const TeamImg = styled.img`
-width: 100%;
-height: 100%;
+width: 480px;
+height: 480px;
 background-color: #fff;
 
 object-fit: cover;

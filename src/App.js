@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar'
 import SigninPage from './pages/signin'
 import Footer from './components/Footer'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { ModalProvider } from 'styled-react-modal'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,13 +17,17 @@ function App() {
 
   return (
     <Router>
+      
+      <ModalProvider>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle}/>
       <Switch>
         <Route path="/" component = {Home} exact />
         <Route path="/signin" component = {SigninPage} exact />
       </Switch>
+      
       <Footer />
+      </ModalProvider>
     </Router>
   );
 }
