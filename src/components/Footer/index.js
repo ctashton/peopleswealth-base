@@ -1,14 +1,16 @@
 import React from 'react'
-import {FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink} from './FooterElements'
-
+import {FooterLogo, FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink} from './FooterElements'
+import logo from '../../images/Logo_Horizontal_Footer.png'
 
 const Footer = () => {
     return (
         <>
             <FooterContainer>
                 <FooterWrap>
+                <FooterLogo src={logo}/>
                     <FooterLinksContainer>
                         <FooterLinksWrapper>
+                           
                             <FooterLinkItems>
                                 <FooterLinkTitle>Company</FooterLinkTitle>
                                     <FooterLink to="/signin">About us</FooterLink>

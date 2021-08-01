@@ -2,7 +2,12 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 export const FooterContainer = styled.footer`
-    background-color: #f9f9f9;
+    background-color: #333;
+`
+export const FooterLogo = styled.img`
+max-width: 480;
+height: auto;
+padding: 40px;
 `
 
 export const FooterWrap = styled.div`
@@ -39,7 +44,7 @@ export const FooterLinkItems = styled.div`
     text-align: left;
     width: 160px;
     box-sizing: border-box;
-    color: #333;
+    color: #f9f9f9;
 
     @media screen and (max-width: 420px) {
         margin: 0;
@@ -51,11 +56,11 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
     font-size: 14px;
     margin-bottom: 16px
-    font-color: #333;
+    font-color: #f9f9f9;
 `
 
 export const FooterLink = styled(Link)`
-    color: #333;
+    color: #f9f9f9;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;

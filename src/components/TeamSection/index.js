@@ -16,32 +16,30 @@ TeamP} from './TeamSectionElements'
 const TeamSection = () => {
     return (
         <TeamContainer>
-        <TeamH1>Our Team</TeamH1>
         <TeamWrapper>
             <TeamCard>
+
+            <TeamH1>Meet the Team</TeamH1>
+            </TeamCard>
+            <TeamCard>
             <TeamImg src={Img1} />
-            <TeamH2>Lorem Ipsum</TeamH2>
-            <TeamP>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</TeamP>
+            <TeamH2>Piero Wong</TeamH2>
             </TeamCard>
             <TeamCard>
             <TeamImg src={Img2} />
-            <TeamH2>Lorem Ipsum</TeamH2>
-            <TeamP>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</TeamP>
+            <TeamH2>Sharon Wong</TeamH2>
             </TeamCard>
             <TeamCard>
             <TeamImg src={Img3} />
-            <TeamH2>Lorem Ipsum</TeamH2>
-            <TeamP>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</TeamP>
+            <TeamH2>Adrien Diez</TeamH2>
             </TeamCard>
             <TeamCard>
             <TeamImg src={Img4} />
-            <TeamH2>Lorem Ipsum</TeamH2>
-            <TeamP>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</TeamP>
+            <TeamH2>Bryan Varra</TeamH2>
             </TeamCard>
             <TeamCard>
             <TeamImg src={Img5} />
-            <TeamH2>Lorem Ipsum</TeamH2>
-            <TeamP>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</TeamP>
+            <TeamH2>Corey Thomas</TeamH2>
             </TeamCard>
             
         </TeamWrapper>
