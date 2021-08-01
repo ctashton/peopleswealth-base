@@ -3,4 +3,36 @@
 body {
     margin: 0px;
     font-family: 'Montserrat', cursive;
+};
+
+.form_container {
+    justify-content: center;
+    margin: 1rem;
+    display: flex;
+};
+
+input {
+    width: 400px !important;
+}
+button {
+    border-radius: 50px;
+    background: #67C8CA;
+    white-space: nowrap;
+    padding: '20px, 50px';
+    width: 200px;
+    height: auto;
+    font-size: 1rem;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    transition: all 0.2s ease-in-out;
+    background: '#FFF' !important;
+    color: #333;
 }
