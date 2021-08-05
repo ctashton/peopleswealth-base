@@ -39,6 +39,7 @@ const TeamSection = () => {
                 isOpen={isOpen}
                 onBackgroundClick={toggleModal}
                 onEscapeKeydown={toggleModal}>
+
           <ModalTeamH1>Piero Wong</ModalTeamH1>
           <ModalTeamH2>CEO</ModalTeamH2>
           <TeamP>Piero is the founder, owner and CEO of People’s Wealth. He started this company to change the financial industry in the United States after watching borrowers fall victim to the sharks in a murky financial industry. In his spare time, Piero has a passion for the level of intensity and concentration that a gym session can bring. Recently, he has been looking to get into golf and hoping to develop a perfect swing.</TeamP>
@@ -48,6 +49,16 @@ const TeamSection = () => {
             <TeamH2>Piero Wong</TeamH2>
             </TeamCard>
             <TeamCard onClick={toggleModal}>
+            <StyledModal2
+                isOpen={isOpen}
+                onBackgroundClick={toggleModal}
+                onEscapeKeydown={toggleModal}>
+
+          <ModalTeamH1>Sharon Wong</ModalTeamH1>
+          <ModalTeamH2>CEO</ModalTeamH2>
+          <TeamP>Piero is the founder, owner and CEO of People’s Wealth. He started this company to change the financial industry in the United States after watching borrowers fall victim to the sharks in a murky financial industry. In his spare time, Piero has a passion for the level of intensity and concentration that a gym session can bring. Recently, he has been looking to get into golf and hoping to develop a perfect swing.</TeamP>
+          <CloseButton src={closeicon} onClick={toggleModal}></CloseButton>
+        </StyledModal2>
             <TeamImg src={Img2} />
             <TeamH2>Sharon Wong</TeamH2>
             </TeamCard>

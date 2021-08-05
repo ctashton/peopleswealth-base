@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import Services from '../components/Services';
 import TeamSection from '../components/TeamSection';
+import Pricing from '../components/Pricing';
 import SignUpForm from '../components/SignUpForm';
 
 
@@ -23,6 +24,7 @@ const Home = () => {
             <HeroSection />
             <InfoSection />
             <Services />
+            <Pricing />
             <TeamSection />
             {/* <SignUpForm /> */}
         </>

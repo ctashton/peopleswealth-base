@@ -1,0 +1,97 @@
+import React, {useState} from 'react'
+import { Button } from '../ButtonElements'
+import { AiFillThunderbolt } from 'react-icons/ai';
+import { GiCrystalBars } from 'react-icons/gi';
+import { GiCutDiamond, GiMoneyStack } from 'react-icons/gi';
+import { GiFloatingCrystal } from 'react-icons/gi';
+import { IconContext } from 'react-icons/lib';
+import {
+  PricingSection,
+  PricingWrapper,
+  PricingHeading,
+  PricingContainer,
+  PricingCard,
+  PricingCardInfo,
+  PricingCardIcon,
+  PricingCardPlan,
+  PricingCardCost,
+  PricingCardLength,
+  PricingCardFeatures,
+  PricingCardFeature,
+  ArrowForward,
+  ArrowRight
+} from './PricingElements.js';
+
+function Pricing() {
+  const [hover, setHover] = useState(false)
+
+  const onHover = () => {
+      setHover(!hover)
+  }
+  return (
+    <IconContext.Provider value={{ color: '#fff', size: 64 }}>
+      <PricingSection>
+        <PricingWrapper>
+          <PricingHeading>Our Cost</PricingHeading>
+          <PricingContainer>
+            <PricingCard to='/sign-up'>
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <GiMoneyStack />
+                </PricingCardIcon>
+                <PricingCardPlan>Silver</PricingCardPlan>
+                <PricingCardCost>$29</PricingCardCost>
+                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardFeatures>
+                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
+                  <PricingCardFeature>Annual wealth checkups</PricingCardFeature>
+                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
+                  
+                </PricingCardFeatures>
+
+              </PricingCardInfo>
+            </PricingCard>
+            <PricingCard to='/sign-up'>
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <GiCrystalBars />
+                </PricingCardIcon>
+                <PricingCardPlan>Gold</PricingCardPlan>
+                <PricingCardCost>$39</PricingCardCost>
+                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardFeatures>
+                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
+                  <PricingCardFeature>Semi-Annual wealth checkups</PricingCardFeature>
+                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
+                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
+                </PricingCardFeatures>
+                
+              </PricingCardInfo>
+            </PricingCard>
+            <PricingCard to='/sign-up'>
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <GiCutDiamond />
+                </PricingCardIcon>
+                <PricingCardPlan>Platinum</PricingCardPlan>
+                <PricingCardCost>$49</PricingCardCost>
+                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardFeatures>
+                <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
+                  <PricingCardFeature>Semi-Annual wealth checkups + 1 additional</PricingCardFeature>
+                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
+                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
+                  <pricingCardFeature>Wealth management</pricingCardFeature>
+                </PricingCardFeatures>
+
+              </PricingCardInfo>
+            </PricingCard>
+          </PricingContainer>
+
+
+        </PricingWrapper>
+      </PricingSection>
+    </IconContext.Provider>
+  );
+}
+export default Pricing;

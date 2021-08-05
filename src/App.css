@@ -11,14 +11,16 @@ body {
     display: flex;
 };
 
-input {
-    width: 400px !important;
+input[type="email" i] {
+    width: 100%!important;
 }
 button {
     border-radius: 50px;
     background: #67C8CA;
     white-space: nowrap;
     padding: '20px, 50px';
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 200px;
     height: auto;
     font-size: 1rem;
@@ -33,6 +35,6 @@ button {
 }
 button:hover {
     transition: all 0.2s ease-in-out;
-    background: '#FFF' !important;
+    background: #FFF !important;
     color: #333;
 }
