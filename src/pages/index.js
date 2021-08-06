@@ -7,7 +7,8 @@ import Services from '../components/Services';
 import TeamSection from '../components/TeamSection';
 import Pricing from '../components/Pricing';
 import SignUpForm from '../components/SignUpForm';
-
+import Example from '../components/CardFlip';
+import TeamSectionNew from '../components/TeamSectionNew';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +26,7 @@ const Home = () => {
             <InfoSection />
             <Services />
             <Pricing />
-            <TeamSection />
+            <TeamSectionNew />
             {/* <SignUpForm /> */}
         </>
     )
