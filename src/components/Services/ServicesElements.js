@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
 export const ServicesContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #333;
-    padding: 100px;
-
-
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0;
+background-color: #333;
+padding: 100px;
+@media screen and (max-width: 960px) {
+  margin: 10 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 `
 export const ServicesH1 = styled.h1`
 margin-bottom: 50px;
@@ -25,22 +29,17 @@ color: #f9f9f9;
 `
 
 export const ServicesWrapper = styled.div`
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    grid-gap: 16px;
-    padding: 0 50px;
-
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
-    } 
-
-    @media screen and (max-width: 768) {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 10px;
+@media screen and (max-width: 960px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 `
 
 
@@ -53,6 +52,7 @@ justify-content: flex-start;
 align-items: center;
 border-radius: 10px;
 padding: 30px;
+margin: 20px;
 box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 transition: all 0.2s ease-in-out;
 width: 300px;
