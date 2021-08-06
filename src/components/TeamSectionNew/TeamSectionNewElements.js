@@ -107,6 +107,7 @@ justify-content: flex-start;
 align-items: left;
 border-radius: 0px;
 padding: 0px;
+max-width: 480px;
 //box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 transition: all 0.2s ease-in-out;
 margin: 0 0;
