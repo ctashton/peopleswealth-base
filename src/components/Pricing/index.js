@@ -98,7 +98,7 @@ function Pricing() {
                   <PricingCardFeature>
                     Premium access to advisor forums
                   </PricingCardFeature>
-                  <pricingCardFeature>Wealth management</pricingCardFeature>
+                  <PricingCardFeature>Wealth management</PricingCardFeature>
                 </PricingCardFeatures>
               </PricingCardInfo>
             </PricingCard>
