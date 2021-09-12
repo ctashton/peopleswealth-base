@@ -1,10 +1,15 @@
-import React, {useState} from 'react'
-import { Button } from '../ButtonElements'
-import { AiFillThunderbolt } from 'react-icons/ai';
-import { GiCrystalBars } from 'react-icons/gi';
-import { GiCutDiamond, GiMoneyStack } from 'react-icons/gi';
-import { GiFloatingCrystal } from 'react-icons/gi';
-import { IconContext } from 'react-icons/lib';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import {
+  GiMoneyStack,
+  GiCrystalBars,
+  GiCutDiamond,
+  // GiFloatingCrystal,
+} from "react-icons/gi";
+import { IconContext } from "react-icons/lib";
+// import { AiFillThunderbolt } from 'react-icons/ai';
+// import { GiFloatingCrystal } from 'react-icons/gi';
+
 import {
   PricingSection,
   PricingWrapper,
@@ -18,77 +23,68 @@ import {
   PricingCardLength,
   PricingCardFeatures,
   PricingCardFeature,
-  ArrowForward,
-  ArrowRight
-} from './PricingElements.js';
+  // ArrowForward,
+  // ArrowRight
+} from "./PricingElements.js";
+// import { Button } from '../ButtonElements'
+
+const strapiURL = process.env.STRAPI_URL || "http://localhost:1337";
 
 function Pricing() {
-  const [hover, setHover] = useState(false)
+  const [pricingData, setPricingData] = useState([]);
 
-  const onHover = () => {
-      setHover(!hover)
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(`${strapiURL}/pricings`);
+      setPricingData(result.data);
+    };
+    fetchData();
+  }, []);
+
+  const renderPlanIcon = (param) => {
+    switch (param) {
+      case "Silver":
+        return <GiMoneyStack />;
+      case "Gold":
+        return <GiCrystalBars />;
+      case "Platinum":
+        return <GiCutDiamond />;
+      default:
+        return <GiMoneyStack />;
+    }
+  };
+
+  // const [hover, setHover] = useState(false)
+  // const onHover = () => {
+  //     setHover(!hover)
+  // }
+
   return (
-    <IconContext.Provider value={{ color: '#fff', size: 64 }}>
+    <IconContext.Provider value={{ color: "#fff", size: 64 }}>
       <PricingSection>
         <PricingWrapper>
           <PricingHeading>Our Cost</PricingHeading>
           <PricingContainer>
-            <PricingCard to='/sign-up'>
-              <PricingCardInfo>
-                <PricingCardIcon>
-                  <GiMoneyStack />
-                </PricingCardIcon>
-                <PricingCardPlan>Silver</PricingCardPlan>
-                <PricingCardCost>$29</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Annual wealth checkups</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  
-                </PricingCardFeatures>
-
-              </PricingCardInfo>
-            </PricingCard>
-            <PricingCard to='/sign-up'>
-              <PricingCardInfo>
-                <PricingCardIcon>
-                  <GiCrystalBars />
-                </PricingCardIcon>
-                <PricingCardPlan>Gold</PricingCardPlan>
-                <PricingCardCost>$39</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Semi-Annual wealth checkups</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
-                </PricingCardFeatures>
-                
-              </PricingCardInfo>
-            </PricingCard>
-            <PricingCard to='/sign-up'>
-              <PricingCardInfo>
-                <PricingCardIcon>
-                  <GiCutDiamond />
-                </PricingCardIcon>
-                <PricingCardPlan>Platinum</PricingCardPlan>
-                <PricingCardCost>$49</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Semi-Annual wealth checkups + 1 additional</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
-                  <pricingCardFeature>Wealth management</pricingCardFeature>
-                </PricingCardFeatures>
-
-              </PricingCardInfo>
-            </PricingCard>
+            {pricingData.map((pricing) => (
+              <PricingCard key={pricing.id} to="/sign-up">
+                <PricingCardInfo>
+                  <PricingCardIcon>
+                    {renderPlanIcon(pricing.plan)}
+                  </PricingCardIcon>
+                  <PricingCardPlan>{pricing.plan}</PricingCardPlan>
+                  <PricingCardCost>${pricing.cost}</PricingCardCost>
+                  <PricingCardLength>{pricing.duration}</PricingCardLength>
+                  <PricingCardFeatures>
+                    {pricing.features.map((feature, index) => (
+                      <PricingCardFeature key={"feature-" + index}>
+                        {feature}
+                      </PricingCardFeature>
+                    ))}
+                  </PricingCardFeatures>
+                </PricingCardInfo>
+              </PricingCard>
+            ))}
           </PricingContainer>
-
-
         </PricingWrapper>
       </PricingSection>
     </IconContext.Provider>
