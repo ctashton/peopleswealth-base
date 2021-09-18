@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import { Button } from '../ButtonElements'
-import { AiFillThunderbolt } from 'react-icons/ai';
-import { GiCrystalBars } from 'react-icons/gi';
-import { GiCutDiamond, GiMoneyStack } from 'react-icons/gi';
-import { GiFloatingCrystal } from 'react-icons/gi';
+import {
+  GiCrystalBars,
+  GiCutDiamond,
+  GiMoneyStack,
+  // GiFloatingCrystal,
+} from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
 import {
   PricingSection,
@@ -18,23 +18,21 @@ import {
   PricingCardLength,
   PricingCardFeatures,
   PricingCardFeature,
-  ArrowForward,
-  ArrowRight
 } from './PricingElements.js';
 
 function Pricing() {
-  const [hover, setHover] = useState(false)
+  // const [hover, setHover] = useState(false);
+  // const onHover = () => {
+  //   setHover(!hover);
+  // };
 
-  const onHover = () => {
-      setHover(!hover)
-  }
   return (
     <IconContext.Provider value={{ color: '#fff', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
           <PricingHeading>Our Cost</PricingHeading>
           <PricingContainer>
-            <PricingCard to='/sign-up'>
+            <PricingCard to="/sign-up">
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiMoneyStack />
@@ -43,15 +41,19 @@ function Pricing() {
                 <PricingCardCost>$29</PricingCardCost>
                 <PricingCardLength>per month</PricingCardLength>
                 <PricingCardFeatures>
-                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Annual wealth checkups</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  
+                  <PricingCardFeature>
+                    Track your new fully tailored financial plan
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Annual wealth checkups
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Manage your financial accounts on one platform
+                  </PricingCardFeature>
                 </PricingCardFeatures>
-
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard to="/sign-up">
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
@@ -60,15 +62,22 @@ function Pricing() {
                 <PricingCardCost>$39</PricingCardCost>
                 <PricingCardLength>per month</PricingCardLength>
                 <PricingCardFeatures>
-                  <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Semi-Annual wealth checkups</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
+                  <PricingCardFeature>
+                    Track your new fully tailored financial plan
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Semi-Annual wealth checkups
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Manage your financial accounts on one platform
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Premium access to advisor forums
+                  </PricingCardFeature>
                 </PricingCardFeatures>
-                
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+            <PricingCard to="/sign-up">
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond />
@@ -77,21 +86,27 @@ function Pricing() {
                 <PricingCardCost>$49</PricingCardCost>
                 <PricingCardLength>per month</PricingCardLength>
                 <PricingCardFeatures>
-                <PricingCardFeature>Track your new fully tailored financial plan</PricingCardFeature>
-                  <PricingCardFeature>Semi-Annual wealth checkups + 1 additional</PricingCardFeature>
-                  <PricingCardFeature>Manage your financial accounts on one platform</PricingCardFeature>
-                  <PricingCardFeature>Premium access to advisor forums</PricingCardFeature>
-                  <pricingCardFeature>Wealth management</pricingCardFeature>
+                  <PricingCardFeature>
+                    Track your new fully tailored financial plan
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Semi-Annual wealth checkups + 1 additional
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Manage your financial accounts on one platform
+                  </PricingCardFeature>
+                  <PricingCardFeature>
+                    Premium access to advisor forums
+                  </PricingCardFeature>
+                  <PricingCardFeature>Wealth management</PricingCardFeature>
                 </PricingCardFeatures>
-
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>
-
-
         </PricingWrapper>
       </PricingSection>
     </IconContext.Provider>
   );
 }
+
 export default Pricing;
