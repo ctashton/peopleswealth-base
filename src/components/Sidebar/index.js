@@ -15,14 +15,14 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarLink to="contact">Contact</SidebarLink>
                     <SidebarLink to="signin">Sign in</SidebarLink>
                 </SidebarMenu>
-                <SideBtnWrap>
+                {/* <SideBtnWrap>
                     <SidebarRoute to='/signin'>
                         Sign Up
                     </SidebarRoute>
                     <SidebarRoute to='/signup'>
                         Sign In
                     </SidebarRoute>
-                </SideBtnWrap>
+                </SideBtnWrap> */}
             </SidebarWrapper>
         </SidebarContainer>
     )

@@ -14,18 +14,19 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <HeroSection />
-      <InfoSection />
-      <Services />
-      <Pricing />
-      <TeamSectionNew />
-      {/* <SignUpForm /> */}
-    </>
-  );
-};
+    return (
+        <>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <Navbar toggle={toggle}/>
+            <HeroSection />
+            <InfoSection />
+            <Services id="services" />
+            <Pricing />
+            <TeamSectionNew />
+            {/* <SignUpForm /> */}
+        </>
+    )
+}
 
-export default Home;
+export default Home
+
